@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "ru.rosneft.Cost.ru.rosneft.cost",
+        "description": "Costs",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#rurosneftcost-Display",
+        "navigationComponentName": "ru.rosneft.Cost",
+        "intentSemanticObject": "ru.rosneft.cost",
+        "intentAction": "Display",
+        "html5ApplicationName": "rurosneftcost",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "37f32688-35ad-4b09-b85b-b887557dc988"
+        ],
+        "contentPackages": [
+            "dbcce193-84aa-4920-a561-fda473c161c5"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Costs",
+        "subtitle": "",
+        "searchKeywords": "Costs,",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
