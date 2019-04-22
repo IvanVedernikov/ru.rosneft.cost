@@ -2,8 +2,9 @@ sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
 	"ru/rosneft/Cost/model/models",
-	"ru/rosneft/Cost/controller/ErrorHandler"
-], function (UIComponent, Device, models, ErrorHandler) {
+	"ru/rosneft/Cost/controller/ErrorHandler",
+	"ru/rosneft/Cost/localService/mockserver"
+], function (UIComponent, Device, models, ErrorHandler, MockServer) {
 	"use strict";
 
 	return UIComponent.extend("ru.rosneft.Cost.Component", {
@@ -19,6 +20,14 @@ sap.ui.define([
 		 * @override
 		 */
 		init: function () {
+
+			MockServer.init();
+
+			var oModel = new sap.ui.model.odata.v2.ODataModel({
+				serviceUrl: "/destinations/service3"
+			});
+			this.setModel(oModel);
+
 			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
 

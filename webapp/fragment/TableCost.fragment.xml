@@ -1,20 +1,29 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
 	<Table id="idProductsTable" inset="false" items="{ path: '/CostSet'}">
 		<columns>
-			<Column width="12em">
-				<Text text="План"/>
+			<Column>
+				<Text text="Оборудование"/>
+			</Column>
+			<Column>
+				<Text text="Собственные работы"/>
 			</Column>
 			<Column minScreenWidth="Tablet" demandPopin="true">
-				<Text text="Факт"/>
+				<Text text="Услуги подрядчика"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="Материалы"/>
 			</Column>
 		</columns>
 		<items>
 			<ColumnListItem>
 				<cells>
+					<Text text="{Pltxt}"/>
 					<ObjectNumber
-						number="{ path: 'Plan', type: 'sap.ui.model.type.Float', formatOptions: { groupingEnabled: true, groupingSeparator: ' ', decimalSeparator: ',' } }"/>
+						number="{ path: 'OwnWorkCost', type: 'sap.ui.model.type.Float', formatOptions: { groupingEnabled: true, groupingSeparator: ' ', decimalSeparator: ',' } }"/>
 					<ObjectNumber
-						number="{ path: 'Fact', type: 'sap.ui.model.type.Float', formatOptions: { groupingEnabled: true, groupingSeparator: ' ', decimalSeparator: ',' } }"/>
+						number="{ path: 'ContractorServicesCost', type: 'sap.ui.model.type.Float', formatOptions: { groupingEnabled: true, groupingSeparator: ' ', decimalSeparator: ',' } }"/>
+					<ObjectNumber
+						number="{ path: 'MaterialsCost', type: 'sap.ui.model.type.Float', formatOptions: { groupingEnabled: true, groupingSeparator: ' ', decimalSeparator: ',' } }"/>
 				</cells>
 			</ColumnListItem>
 		</items>
